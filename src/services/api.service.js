@@ -40,6 +40,10 @@ class ApiService {
   getAllProducts = () => {
     return this.api.get('/api/products/');
   };
+
+  getThisProduct = id => {
+    return this.api.get(`/api/products/${id}`);
+  };
 }
 
 // Create one instance (object) of the service

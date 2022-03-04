@@ -1,19 +1,19 @@
-function AllProducts({ name, description, price, category, photo, shipping }) {
+import { Link } from 'react-router-dom';
+
+function AllProducts({ id, name, category, photo, shipping }) {
+  console.log(id);
   return (
-    <article>
-      <h2>{name}</h2>
-      <div>
-        <p>{description}</p>
-      </div>
-      <div>
-        <p>{price}€</p>
-      </div>
+    <div>
+      <h2>
+        <Link to={`/product/${id}`}>{name}</Link>
+      </h2>
+
       <div>
         <p>{category}</p>
         <p>This is a picture of the product{photo}</p>
         <p>Shipping? {shipping}</p>
       </div>
-    </article>
+    </div>
   );
 }
 

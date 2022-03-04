@@ -8,13 +8,10 @@ function Home() {
     apiService
       .getAllProducts()
       .then(response => {
-        console.log(response.data);
         setProducts(response.data);
       })
       .catch(error => console.error(error));
   }, []);
-
-  console.log(products);
 
   return (
     <div>
@@ -24,10 +21,11 @@ function Home() {
         return (
           <AllProducts
             key={product._id}
+            id={product._id}
             name={product.name}
             description={product.description}
             price={product.price}
-            catgeory={product.category}
+            category={product.category}
             photo={product.photo}
             shipping={product.shipping}
           />

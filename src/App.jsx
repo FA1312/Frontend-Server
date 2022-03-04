@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Product from './components/Product';
 import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
 import Navbar from './components/Navbar';
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={<Product />}></Route>
         <Route
           path="/protected"
           element={

@@ -38,7 +38,7 @@ class ApiService {
   };
 
   getAllProducts = () => {
-    return this.api.get('/');
+    return this.api.get('/api/products/');
   };
 }
 

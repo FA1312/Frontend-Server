@@ -7,8 +7,6 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
-import Products from './components/Products';
-import About from './pages/About';
 
 function App() {
   return (
@@ -40,22 +38,7 @@ function App() {
             </IsAnon>
           }
         />
-        <Route
-          path="/products"
-          element={
-            <IsAnon>
-              <Products />
-            </IsAnon>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <IsAnon>
-              <About />
-            </IsAnon>
-          }
-        />
+
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </AuthProviderWrapper>

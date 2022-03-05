@@ -16,7 +16,7 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
-
+      <h2>This is AllProducts list</h2>
       {products.map(product => {
         return (
           <AllProducts

@@ -6,8 +6,6 @@ function Product() {
   const [productDetail, setProductDetail] = useState({});
   const { id } = useParams();
 
-  console.log(id);
-
   useEffect(() => {
     apiService
       .getThisProduct(id)
@@ -27,7 +25,7 @@ function Product() {
         <p>{productDetail.price}</p>
         <p>{productDetail.shipping}</p>
       </article>
-
+      <Link to={`/product/${id}/edit`}>Edit</Link>
       <article>
         <Link to={'/'}>
           <button>Homepage </button>

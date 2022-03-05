@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 function AllProducts({ id, name, category, photo, shipping }) {
-  console.log(id);
   return (
     <div>
       <h2>

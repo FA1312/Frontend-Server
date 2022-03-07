@@ -37,7 +37,7 @@ function EditProduct() {
     apiService
       .updateProduct(product._id, {
         name: product.name,
-        description: product.priority,
+        description: product.description,
         price: product.price,
         category: product.category,
         photo: product.photo,

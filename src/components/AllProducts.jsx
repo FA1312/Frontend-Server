@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function AllProducts({ id, name, category, photo, shipping }) {
+function AllProducts({ id, name, category, photo }) {
   return (
     <div>
       <h2>
@@ -9,8 +9,7 @@ function AllProducts({ id, name, category, photo, shipping }) {
 
       <div>
         <p>{category}</p>
-        <p>This is a picture of the product{photo}</p>
-        <p>Shipping? {shipping}</p>
+        <img src={photo} alt={name} />
       </div>
     </div>
   );

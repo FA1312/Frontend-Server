@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import apiService from '../services/api.service';
 import AllProducts from '../components/AllProducts';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -31,6 +32,9 @@ function Home() {
           />
         );
       })}
+      <div>
+        <Link to={`/product/add`}>Add a product</Link>
+      </div>
     </div>
   );
 }

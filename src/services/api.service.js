@@ -38,7 +38,7 @@ class ApiService {
   };
 
   getAllProducts = () => {
-    return this.api.get('/api/products/');
+    return this.api.get('/api/products');
   };
 
   getThisProduct = id => {
@@ -46,7 +46,15 @@ class ApiService {
   };
 
   updateProduct = (id, body) => {
-    return this.api.put(`/api/products/${id}`, body);
+    return this.api.put(`/api/products/${id}/edit`, body);
+  };
+
+  addProduct = form => {
+    return this.api.post('/api/products', form);
+  };
+
+  deleteProduct = id => {
+    return this.api.delete(`/api/products/${id}/delete`);
   };
 }
 

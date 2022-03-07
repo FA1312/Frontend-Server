@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
 
 function Product() {
   const [productDetail, setProductDetail] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     apiService
@@ -17,6 +18,15 @@ function Product() {
       });
   }, []);
 
+  const handleDelete = async () => {
+    try {
+      await apiService.deleteProduct(id);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <article>
@@ -24,6 +34,7 @@ function Product() {
         <p>{productDetail.description}</p>
         <p>{productDetail.price}</p>
         <p>{productDetail.shipping}</p>
+        <button onClick={handleDelete}>Delete this Product</button>
       </article>
       <Link to={`/product/${id}/edit`}>Edit</Link>
       <article>

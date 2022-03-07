@@ -27,6 +27,7 @@ function Product() {
     }
   };
 
+  console.log(productDetail);
   return (
     <div>
       <article>
@@ -34,7 +35,10 @@ function Product() {
         <p>{productDetail.description}</p>
         <p>{productDetail.price} €</p>
         <p>{productDetail.shipping ? 'We can ship the item' : 'Unfortunately the item cannot be shipped'}</p>
-        <img src={productDetail.photo} alt={productDetail.name} />
+        <div className>
+          <img src={productDetail.photo} alt={productDetail.name} />
+        </div>
+
         <button onClick={handleDelete}>Delete this Product</button>
       </article>
       <Link to={`/product/${id}/edit`}>Edit</Link>

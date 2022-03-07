@@ -17,6 +17,10 @@ function Home() {
   return (
     <div>
       <h1>Welcome to Meraki</h1>
+      <div>
+        <label>Search</label>
+        <input type="text" onChange={e => console.log(e.target.value)} />
+      </div>
       <h2>This is AllProducts list</h2>
       {products.map(product => {
         return (
@@ -34,6 +38,9 @@ function Home() {
       })}
       <div>
         <Link to={`/product/add`}>Add a product</Link>
+      </div>
+      <div>
+        <Link to={`/about`}>About</Link>
       </div>
     </div>
   );

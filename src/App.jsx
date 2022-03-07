@@ -10,6 +10,7 @@ import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
 import EditProduct from './components/EditProduct';
 import AddProduct from './components/AddProduct';
+import About from './components/About';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/product/:id" element={<Product />}></Route>
         <Route path="/product/:id/edit" element={<EditProduct />}></Route>
         <Route path="/product/add" element={<AddProduct />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route
           path="/protected"
           element={

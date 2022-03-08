@@ -58,6 +58,9 @@ function Home() {
       <div>
         <Link to={`/about`}>About</Link>
       </div>
+      <div>
+        <Link to={`/reviews`}>Reviews</Link>
+      </div>
     </div>
   );
 }

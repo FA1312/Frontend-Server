@@ -11,6 +11,7 @@ import SignupPage from './pages/SignupPage';
 import EditProduct from './components/EditProduct';
 import AddProduct from './components/AddProduct';
 import About from './components/About';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/product/:id/edit" element={<EditProduct />}></Route>
         <Route path="/product/add" element={<AddProduct />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/reviews" element={<Reviews />}></Route>
         <Route
           path="/protected"
           element={

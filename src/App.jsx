@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import { AuthProviderWrapper } from './context/auth.context';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
 import EditProduct from './components/EditProduct';
 import AddProduct from './components/AddProduct';
@@ -20,18 +19,25 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="/product/:id/edit" element={<EditProduct />}></Route>
-        <Route path="/product/add" element={<AddProduct />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/reviews" element={<Reviews />}></Route>
         <Route
-          path="/protected"
+          path="/product/:id/edit"
           element={
             <IsPrivate>
-              <Protected />
+              <EditProduct />
             </IsPrivate>
           }
-        />
+        ></Route>
+        <Route
+          path="/product/add"
+          element={
+            <IsPrivate>
+              <AddProduct />
+            </IsPrivate>
+          }
+        ></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/reviews" element={<Reviews />}></Route>
+
         <Route
           path="/login"
           element={

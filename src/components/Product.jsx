@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
+import { useContext } from 'react';
+import { AuthContext } from './../context/auth.context';
 
 function Product() {
   const [productDetail, setProductDetail] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
+  const { isLoggedIn } = useContext(AuthContext);
 
   useEffect(() => {
     apiService
@@ -38,15 +41,24 @@ function Product() {
         <div className>
           <img src={productDetail.photo} alt={productDetail.name} />
         </div>
-
-        <button onClick={handleDelete}>Delete this Product</button>
       </article>
-      <Link to={`/product/${id}/edit`}>Edit</Link>
-      <article>
-        <Link to={'/'}>
-          <button>Homepage </button>
-        </Link>
-      </article>
+      <div>
+        {isLoggedIn && (
+          <>
+            <Link to={`/product/${id}/edit`}>Edit</Link>
+          </>
+        )}
+      </div>
+      <div>
+        {isLoggedIn && (
+          <>
+            <button onClick={handleDelete}>Delete this Product</button>
+          </>
+        )}
+      </div>
+      <Link to={'/'}>
+        <button>Homepage </button>
+      </Link>
     </div>
   );
 }

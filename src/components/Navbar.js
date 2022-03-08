@@ -15,10 +15,6 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <Link to="/protected">
-            <button>Protected</button>
-          </Link>
-
           <button onClick={logOutUser}>Logout</button>
           <span>{user && user.name}</span>
         </>

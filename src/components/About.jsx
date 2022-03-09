@@ -6,9 +6,9 @@ function About() {
       <h1>Hey, welcome to about</h1>
       <div>
         <p>
-          Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport
-          etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu
-          commun vocabules.{' '}
+          Meraki, a verb, or adverb, a Modern Greek word, derived from the Turkish “Merak” (Labor of love, to do
+          something with pleasure), is applied to tasks, usually, creative or artistic tasks but can be applied to any
+          task at all. Meraki means to do something with passion, with absolute devotion, with undivided attention.
         </p>
         <p>
           A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li

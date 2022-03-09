@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth.context';
+import { ImUserPlus } from 'react-icons/im';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -31,21 +32,21 @@ function LoginPage() {
 
   return (
     <div className="LoginPage">
-      <h1>Login</h1>
-
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
-
+        <br />
         <button type="submit">Login</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-
       <p>Dont have an account yet?</p>
-      <Link to={'/signup'}> Sign Up</Link>
+      <Link to={'/signup'}> Sign Up</Link>{' '}
+      <icons className="addicon">
+        <ImUserPlus />
+      </icons>
     </div>
   );
 }

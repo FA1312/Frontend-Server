@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth.context';
+import { RiAccountCircleFill } from 'react-icons/ri';
 
 function SignupPage() {
   const [email, setEmail] = useState('');
@@ -35,8 +36,6 @@ function SignupPage() {
 
   return (
     <div className="SignupPage">
-      <h1>Sign Up</h1>
-
       <form onSubmit={handleSignupSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
@@ -46,14 +45,19 @@ function SignupPage() {
 
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
-
+        <br />
         <button type="submit">Sign Up</button>
       </form>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Already have account?</p>
-      <Link to={'/login'}> Login</Link>
+      <div className="footer-signup">
+        <p>Already have account?</p>
+        <Link to={'/login'}> Login</Link>{' '}
+        <icons className="addicon">
+          <RiAccountCircleFill />
+        </icons>
+      </div>
     </div>
   );
 }

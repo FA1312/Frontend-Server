@@ -1,0 +1,141 @@
+* {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(238, 222, 222);
+  background-color: rgb(30, 137, 76);
+}
+
+.welcomebar {
+  font-size: 600;
+}
+
+.welcomebar h1 {
+  padding: 0.8rem;
+  letter-spacing: 0.6rem;
+  border: outset white 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 500px;
+}
+
+.welcomebar button {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.container h2 {
+  margin-top: 1.5rem;
+}
+
+.login {
+  border: solid white 0.3rem;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.6rem;
+  text-align: center;
+  width: 75%;
+  margin-left: 2.5rem;
+}
+
+.container h3 {
+  margin-top: 0.6rem;
+}
+
+.searchbar {
+  margin-top: 0.5rem;
+  border: groove white 3px;
+  border-radius: 20px;
+  background-color: aliceblue;
+  color: black;
+}
+
+.searchbar:focus {
+  color: black;
+}
+
+.product-card {
+  margin: 1.5rem 0;
+}
+
+.product-card h4 {
+  font-size: large;
+  font-style: oblique;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.product-card p {
+  font-size: small;
+  font-weight: 400;
+}
+
+.product-card img {
+  border-radius: 30px;
+  height: 250px;
+  width: 250px;
+  margin: 0.8rem 0 0 3.3rem;
+}
+
+.add {
+  font-size: smaller;
+  font-weight: 500;
+}
+
+.addicon {
+  display: inline-block;
+}
+
+.SignupPage input {
+  border-radius: 30px;
+  font-size: small;
+  padding: 4px 1px;
+  border: 1px solid black;
+}
+
+.SignupPage form {
+  margin: 1rem 0;
+}
+
+.SignupPage form button {
+  margin-top: 1rem;
+}
+
+.SignupPage label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 34px;
+  margin-bottom: 10px;
+}
+
+.footer-signup {
+  margin-top: 1.7rem;
+}
+
+.LoginPage label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 14px;
+  margin: 2rem 0;
+}
+
+.LoginPage input {
+  border-radius: 30px;
+  font-size: small;
+  padding: 4px 1px;
+  border: 1px solid black;
+}
+
+.LoginPage form {
+  margin: 1rem 0;
+}
+
+.LoginPage form button {
+  margin-top: 1rem;
+}
+
+.LoginPage p {
+  margin-bottom: 1rem;
+}

@@ -11,6 +11,13 @@ import EditProduct from './components/EditProduct';
 import AddProduct from './components/AddProduct';
 import About from './components/About';
 import Reviews from './components/Reviews';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Roboto:300,400,700', 'sans-serif']
+  }
+});
 
 function App() {
   return (

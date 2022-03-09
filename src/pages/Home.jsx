@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import apiService from '../services/api.service';
 import AllProducts from '../components/AllProducts';
 import { Link } from 'react-router-dom';
+import { RiHeartAddLine } from 'react-icons/ri';
+import { FcAbout } from 'react-icons/fc';
+import { MdOutlineRateReview } from 'react-icons/md';
+import '../css/app.css';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -16,12 +20,15 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome to Meraki</h1>
+    <div className="container">
+      <h3>
+        {' '}
+        <i>This is the list of the item I created</i>
+      </h3>
       <div>
-        <input placeholder="Search for magic" onChange={event => setQuery(event.target.value)} />
+        <input className="searchbar" placeholder="Search for cariño" onChange={event => setQuery(event.target.value)} />
       </div>
-      <h2>This is AllProducts list</h2>
+
       {products
         .filter(product => {
           if (query === '') {
@@ -44,14 +51,23 @@ function Home() {
             />
           );
         })}
-      <div>
-        <Link to={`/product/add`}>Add a product</Link>
+      <div className="add">
+        <Link to={`/product/add`}>Add a product</Link>{' '}
+        <icons className="addicon">
+          <RiHeartAddLine />
+        </icons>
       </div>
-      <div>
-        <Link to={`/about`}>About</Link>
+      <div className="add">
+        <Link to={`/about`}>About</Link>{' '}
+        <icons className="addicon">
+          <FcAbout />
+        </icons>
       </div>
-      <div>
-        <Link to={`/reviews`}>Reviews</Link>
+      <div className="add">
+        <Link to={`/reviews`}>Reviews</Link>{' '}
+        <icons className="addicon">
+          <MdOutlineRateReview />
+        </icons>
       </div>
     </div>
   );

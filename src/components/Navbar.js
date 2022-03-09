@@ -27,11 +27,12 @@ function Navbar() {
 
         {isLoggedIn && (
           <>
-            {' '}
-            Are you another user?
-            <button onClick={logOutUser}>
-              <AiOutlineLogout />
-            </button>{' '}
+            <small>
+              Are you another user?
+              <button onClick={logOutUser}>
+                <AiOutlineLogout />
+              </button>
+            </small>
           </>
         )}
         <div className="login">

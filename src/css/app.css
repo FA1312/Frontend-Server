@@ -28,14 +28,12 @@
 }
 
 .login {
-  border: solid white 0.3rem;
-  border-radius: 16px;
   display: flex;
   justify-content: space-evenly;
   font-size: 0.6rem;
   text-align: center;
   width: 75%;
-  margin-left: 2.5rem;
+  margin-left: 2.7rem;
 }
 
 .container h3 {
@@ -118,7 +116,7 @@
   flex-direction: column;
   justify-content: center;
   line-height: 14px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .LoginPage input {
@@ -133,9 +131,19 @@
 }
 
 .LoginPage form button {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: rgb(30, 137, 76);
+  font-weight: 800;
 }
 
 .LoginPage p {
-  margin-bottom: 1rem;
+  margin-bottom: 0-5rem;
+  margin-top: 2rem;
+}
+
+.login-container {
+  margin-top: 2rem;
 }

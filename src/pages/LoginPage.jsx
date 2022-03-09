@@ -32,21 +32,23 @@ function LoginPage() {
 
   return (
     <div className="LoginPage">
-      <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+      <div className="login-container">
+        <form onSubmit={handleLoginSubmit}>
+          <label>Email:</label>
+          <input type="email" name="email" value={email} onChange={handleEmail} />
 
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
-        <br />
-        <button type="submit">Login</button>
-      </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <p>Dont have an account yet?</p>
-      <Link to={'/signup'}> Sign Up</Link>{' '}
-      <icons className="addicon">
-        <ImUserPlus />
-      </icons>
+          <label>Password:</label>
+          <input type="password" name="password" value={password} onChange={handlePassword} />
+          <br />
+          <button type="submit">Login</button>
+        </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <p>Dont have an account yet?</p>
+        <Link to={'/signup'}> Sign Up</Link>{' '}
+        <icons className="addicon">
+          <ImUserPlus />
+        </icons>
+      </div>
     </div>
   );
 }

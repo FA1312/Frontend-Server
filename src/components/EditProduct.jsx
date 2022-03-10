@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import apiService from '../services/api.service';
+import { FcFlashOn } from 'react-icons/fc';
+import { FcIdea } from 'react-icons/fc';
 
 function EditProduct() {
   const { id } = useParams();
@@ -51,8 +53,13 @@ function EditProduct() {
   };
 
   return (
-    <div>
-      <h1>Update the product</h1>
+    <div className="edit-product">
+      <h1>
+        In this page you can modify the product
+        <icons className="addicon">
+          <FcFlashOn />
+        </icons>
+      </h1>
       <form onSubmit={handleSubmit}>
         <label>Name</label>
         <input type="text" name="name" value={product.name} onChange={handleOnChange} />
@@ -72,7 +79,12 @@ function EditProduct() {
         <label>Shipping</label>
         <input type="text" name="shipping" value={product.shipping} onChange={handleOnChange} />
 
-        <button type="submit">Update Your Product</button>
+        <button type="submit">
+          Click to Update!{' '}
+          <icons className="addicon">
+            <FcIdea />
+          </icons>{' '}
+        </button>
       </form>
     </div>
   );

@@ -61,6 +61,7 @@
 }
 
 .product-card h4 {
+  margin-top: 2.5rem;
   font-size: large;
   font-style: oblique;
   font-weight: 700;
@@ -177,10 +178,11 @@
   font-style: oblique;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  border: 3px solid white;
-  background-color: rgb(30, 137, 76);
+  border: 3px solid black;
+  background-color: white;
   border-radius: 20px;
   color: black;
+  padding: 0.8rem;
 }
 
 .container-detail p {
@@ -198,7 +200,7 @@
 }
 
 .editLink {
-  border: 1px solid white;
+  border: 2px solid black;
   background-color: white;
   color: rgb(30, 137, 76);
   padding: 0.5rem;
@@ -210,7 +212,7 @@
 }
 
 .deleteBtn {
-  border: 1px solid white;
+  border: 2px solid black;
   background-color: rgb(179, 0, 0);
   color: black;
   padding: 0.5rem;
@@ -220,4 +222,84 @@
 .price {
   margin-bottom: 1rem;
   border: 1px solid black;
+}
+
+.addProduct h1 {
+  margin-top: 1rem;
+  font-weight: 600;
+  border: 2px solid black;
+}
+
+.addLabels {
+  text-align: center;
+  border: solid rgb(30, 137, 76) 3px;
+  padding: 1rem;
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.addLabels input {
+  margin: 0.3rem 1rem 1rem 1rem;
+  border-radius: 20px;
+}
+
+.addLabels input:focus {
+  background-color: rgb(30, 137, 76);
+  color: white;
+}
+
+.addLabels button {
+  margin-top: 1rem;
+  border: solid 3px white;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: white;
+  color: rgb(30, 137, 76);
+  font-weight: 700;
+}
+
+.edit-product {
+  text-align: center;
+  border: solid rgb(30, 137, 76) 3px;
+  padding: 1rem;
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.edit-product h1 {
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  border: solid 3px white;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: white;
+  color: rgb(30, 137, 76);
+  font-weight: 500;
+}
+
+.edit-product input {
+  margin: 0.3rem 1rem 1rem 1rem;
+  border-radius: 20px;
+  color: black;
+}
+
+.edit-product input:focus {
+  background-color: rgb(30, 137, 76);
+  color: white;
+}
+
+.edit-product button {
+  margin-top: 1rem;
+  border: solid 3px white;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: white;
+  color: rgb(30, 137, 76);
+  font-weight: 700;
+}
+
+.edit-product svg {
+  background-color: white;
 }

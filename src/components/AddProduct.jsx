@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import apiService from '../services/api.service';
+import { MdProductionQuantityLimits } from 'react-icons/md';
+import { FcHome } from 'react-icons/fc';
 
 function AddProduct() {
   const [form, setForm] = useState({
@@ -36,24 +38,38 @@ function AddProduct() {
   };
 
   return (
-    <div>
-      <h1>Add A Product to the store</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input type="text" name="name" value={form.name} onChange={handleForm} />
-        <label>Description</label>
-        <input type="text" name="description" value={form.description} onChange={handleForm} />
-        <label>Price</label>
-        <input type="text" name="price" value={form.price} onChange={handleForm} />
-        <label>Category</label>
-        <input type="text" name="category" value={form.category} onChange={handleForm} />
-        <label>Photo</label>
-        <input type="text" name="photo" value={form.photo} onChange={handleForm} />
-        <label>Shipping</label>
-        <input type="text" name="shipping" value={form.shipping} onChange={handleForm} />
+    <div className="addProduct">
+      <h1>
+        Add A Product to the store
+        <icons className="addicon">
+          <MdProductionQuantityLimits />
+        </icons>
+      </h1>
 
-        <button type="submit">Add New Product</button>
-      </form>
+      <div className="addLabels">
+        <form onSubmit={handleSubmit}>
+          <label>What is the name of the product?</label>
+          <input type="text" name="name" value={form.name} onChange={handleForm} />
+          <label>What is the product about?</label>
+          <input type="text" name="description" value={form.description} onChange={handleForm} />
+          <label>Price</label>
+          <input type="text" name="price" value={form.price} onChange={handleForm} />
+          <label>Which category is the product?</label>
+          <input type="text" name="category" value={form.category} onChange={handleForm} />
+          <label>Upload a picture of your product</label>
+          <input type="text" name="photo" value={form.photo} onChange={handleForm} />
+          <label>Can you ship the product?</label>
+          <input type="text" name="shipping" value={form.shipping} onChange={handleForm} />
+
+          <button type="submit">Add New Product</button>
+        </form>
+      </div>
+      <Link to={'/'}>
+        <button>Homepage </button>{' '}
+        <icons className="addicon">
+          <FcHome />
+        </icons>
+      </Link>
     </div>
   );
 }

@@ -15,16 +15,22 @@
 
 .welcomebar h1 {
   padding: 0.8rem;
-  letter-spacing: 0.6rem;
-  border: outset white 0.3rem;
+  letter-spacing: 0.9rem;
+  border: solid white 0.3rem;
   font-size: 1.5rem;
   font-weight: 600;
   border-radius: 500px;
+  padding: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .welcomebar button {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.container {
+  padding: 1rem;
 }
 
 .container h2 {
@@ -37,7 +43,6 @@
   font-size: 0.6rem;
   text-align: center;
   width: 75%;
-  margin-left: 2.7rem;
 }
 
 .container h3 {
@@ -89,16 +94,17 @@
   border-radius: 30px;
   height: 250px;
   width: 250px;
-  margin: 0.8rem 0 0 3.3rem;
+  margin: 0.8rem 0 0 2rem;
 }
 
 .add {
-  font-size: smaller;
+  font-size: medium;
   font-weight: 500;
 }
 
 .addicon {
   display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .SignupPage input {
@@ -171,6 +177,7 @@
 
 .container-detail {
   margin-top: 1rem;
+  padding: 1rem;
 }
 
 .container-detail h2 {
@@ -187,6 +194,7 @@
 
 .container-detail p {
   margin-top: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .container-detail img {
@@ -196,7 +204,6 @@
 .edit-delete {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
 }
 
 .editLink {
@@ -302,4 +309,58 @@
 
 .edit-product svg {
   background-color: white;
+}
+
+a.social {
+  margin: 0.8rem 0.7rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+.social-container svg {
+  background: none !important;
+}
+
+a.gmail {
+  padding: 0.3rem;
+  background: #eb3223;
+  border-radius: 10px;
+}
+
+a.facebook {
+  padding: 0.3rem;
+  background: #1f4eb4;
+  border-radius: 10px;
+}
+
+a.github {
+  padding: 0.3rem;
+  border-radius: 10px;
+  background: black;
+}
+
+a.instagram {
+  padding: 0.3rem;
+  background: purple;
+  border-radius: 10px;
+}
+
+.client {
+  width: 7rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 0.2rem solid black;
+}
+
+.testimonials {
+  padding: 1.5rem;
+}
+
+.client {
+  margin-top: 2rem;
+}
+
+.container-about {
+  padding: 1.5rem;
 }

@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
 import { MdProductionQuantityLimits } from 'react-icons/md';
-import { FcHome } from 'react-icons/fc';
 
 function AddProduct() {
   const [form, setForm] = useState({
@@ -64,12 +63,6 @@ function AddProduct() {
           <button type="submit">Add New Product</button>
         </form>
       </div>
-      <Link to={'/'}>
-        <button>Homepage </button>{' '}
-        <icons className="addicon">
-          <FcHome />
-        </icons>
-      </Link>
     </div>
   );
 }

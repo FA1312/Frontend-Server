@@ -4,7 +4,7 @@ import apiService from '../services/api.service';
 import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 import { MdLocalShipping } from 'react-icons/md';
-import { FcHome } from 'react-icons/fc';
+
 import { FcMoneyTransfer } from 'react-icons/fc';
 
 function Product() {
@@ -72,13 +72,6 @@ function Product() {
           )}
         </div>
       </div>
-
-      <Link to={'/'}>
-        <button>Homepage </button>{' '}
-        <icons className="addicon">
-          <FcHome />
-        </icons>
-      </Link>
     </div>
   );
 }

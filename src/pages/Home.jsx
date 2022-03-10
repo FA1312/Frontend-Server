@@ -21,10 +21,6 @@ function Home() {
 
   return (
     <div className="container">
-      <h3>
-        {' '}
-        <i>This is the list of the item I created</i>
-      </h3>
       <div>
         <input className="searchbar" placeholder="Search for cariño" onChange={event => setQuery(event.target.value)} />
       </div>

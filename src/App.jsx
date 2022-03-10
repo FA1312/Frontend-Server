@@ -12,11 +12,12 @@ import AddProduct from './components/AddProduct';
 import About from './components/About';
 import Reviews from './components/Reviews';
 import WebFont from 'webfontloader';
+import Footer from './components/Footer';
 
 WebFont.load({
   google: {
-    families: ['Roboto:300,400,700', 'sans-serif']
-  }
+    families: ['Roboto:300,400,700', 'sans-serif'],
+  },
 });
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
 
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
+      <Footer />
     </AuthProviderWrapper>
   );
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <div>
+    <div className="container-about">
       <h1>Hey, welcome to about</h1>
       <div>
         <p>
@@ -19,6 +19,7 @@ function About() {
           pronunciation e plu sommun paroles.
         </p>
       </div>
+
       <article>
         <Link to={'/'}>
           <button>Homepage </button>

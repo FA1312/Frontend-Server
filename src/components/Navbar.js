@@ -21,7 +21,7 @@ function Navbar() {
           <div className="welcomeName">
             <Link to="/">
               <button>
-                <strong>Welcome to my webpage {user && user.name} </strong>
+                <strong>Hey, take a look at my items {user && user.name} </strong>
               </button>
             </Link>
           </div>

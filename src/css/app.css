@@ -9,6 +9,10 @@
   font-size: 600;
 }
 
+.welcomeName {
+  margin-top: -0.9rem;
+}
+
 .welcomebar h1 {
   padding: 0.8rem;
   letter-spacing: 0.6rem;
@@ -44,8 +48,8 @@
   margin-top: 0.5rem;
   border: groove white 3px;
   border-radius: 20px;
-  background-color: aliceblue;
-  color: black;
+  background-color: white;
+  color: white;
 }
 
 .searchbar:focus {
@@ -60,12 +64,24 @@
   font-size: large;
   font-style: oblique;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
+  border: 3px solid white;
+  background-color: rgb(30, 137, 76);
+  border-radius: 20px;
+  color: black;
+}
+
+.product-card a {
+  border-radius: 30px;
+  padding: 0.3rem;
 }
 
 .product-card p {
   font-size: small;
   font-weight: 400;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-style: italic;
 }
 
 .product-card img {
@@ -146,4 +162,62 @@
 
 .login-container {
   margin-top: 2rem;
+}
+
+.anotheruser {
+  margin-top: -1.5rem;
+}
+
+.container-detail {
+  margin-top: 1rem;
+}
+
+.container-detail h2 {
+  font-size: large;
+  font-style: oblique;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  border: 3px solid white;
+  background-color: rgb(30, 137, 76);
+  border-radius: 20px;
+  color: black;
+}
+
+.container-detail p {
+  margin-top: 1rem;
+}
+
+.container-detail img {
+  margin: 1rem 0;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.editLink {
+  border: 1px solid white;
+  background-color: white;
+  color: rgb(30, 137, 76);
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.editLink a {
+  background-color: white;
+}
+
+.deleteBtn {
+  border: 1px solid white;
+  background-color: rgb(179, 0, 0);
+  color: black;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.price {
+  margin-bottom: 1rem;
+  border: 1px solid black;
 }

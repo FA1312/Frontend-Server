@@ -18,23 +18,26 @@ function Navbar() {
           <icons className="addicon">
             <GiHeartEarrings />{' '}
           </icons>
-          <Link to="/">
-            <button>
-              <strong>Welcome to my webpage</strong> {user && user.name}
-            </button>
-          </Link>
-        </section>
-
-        {isLoggedIn && (
-          <>
-            <small>
-              Are you another user?
-              <button onClick={logOutUser}>
-                <AiOutlineLogout />
+          <div className="welcomeName">
+            <Link to="/">
+              <button>
+                <strong>Welcome to my webpage {user && user.name} </strong>
               </button>
-            </small>
-          </>
-        )}
+            </Link>
+          </div>
+        </section>
+        <div>
+          {isLoggedIn && (
+            <div className="anotheruser">
+              <small>
+                Are you another user?
+                <button onClick={logOutUser}>
+                  <AiOutlineLogout />
+                </button>
+              </small>
+            </div>
+          )}
+        </div>
         <div className="login">
           {!isLoggedIn && (
             <>

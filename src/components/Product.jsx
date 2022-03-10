@@ -3,6 +3,9 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
 import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
+import { MdLocalShipping } from 'react-icons/md';
+import { FcHome } from 'react-icons/fc';
+import { FcMoneyTransfer } from 'react-icons/fc';
 
 function Product() {
   const [productDetail, setProductDetail] = useState({});
@@ -32,32 +35,49 @@ function Product() {
 
   console.log(productDetail);
   return (
-    <div>
+    <div className="container-detail">
       <article>
-        <p>{productDetail.name}</p>
-        <p>{productDetail.description}</p>
-        <p>{productDetail.price} €</p>
-        <p>{productDetail.shipping ? 'We can ship the item' : 'Unfortunately the item cannot be shipped'}</p>
-        <div className>
+        <h2>{productDetail.name}</h2>
+        <p>- {productDetail.description}</p>
+
+        <p>
+          {productDetail.shipping ? 'We can ship the item ' : 'Unfortunately the item cannot be shipped'}
+          <icons className="addicon">
+            <MdLocalShipping />
+          </icons>
+        </p>
+        <div>
           <img src={productDetail.photo} alt={productDetail.name} />
         </div>
+        <p className="price">
+          Price: {productDetail.price} €{' '}
+          <icons className="addicon">
+            <FcMoneyTransfer />
+          </icons>
+        </p>
       </article>
-      <div>
-        {isLoggedIn && (
-          <>
-            <Link to={`/product/${id}/edit`}>Edit</Link>
-          </>
-        )}
+      <div className="edit-delete">
+        <div className="editLink">
+          {isLoggedIn && (
+            <>
+              <Link to={`/product/${id}/edit`}>Edit</Link>
+            </>
+          )}
+        </div>
+        <div className="deleteBtn">
+          {isLoggedIn && (
+            <>
+              <button onClick={handleDelete}>Delete this Product</button>
+            </>
+          )}
+        </div>
       </div>
-      <div>
-        {isLoggedIn && (
-          <>
-            <button onClick={handleDelete}>Delete this Product</button>
-          </>
-        )}
-      </div>
+
       <Link to={'/'}>
-        <button>Homepage </button>
+        <button>Homepage </button>{' '}
+        <icons className="addicon">
+          <FcHome />
+        </icons>
       </Link>
     </div>
   );

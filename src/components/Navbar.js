@@ -4,6 +4,8 @@ import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { GiHeartEarrings } from 'react-icons/gi';
+import { FiUserPlus } from 'react-icons/fi';
+import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Navbar() {
   // Subscribe to the AuthContext to gain access to
@@ -43,11 +45,18 @@ function Navbar() {
             <>
               <Link to="/signup">
                 {' '}
-                <button>Sign Up</button>{' '}
+                <button>Sign Up</button>
+                <icons className="addicon">
+                  <FiUserPlus />
+                </icons>
               </Link>
+
               <Link to="/login">
                 {' '}
                 <button>Login</button>{' '}
+                <icons className="addicon">
+                  <RiLoginCircleFill />
+                </icons>
               </Link>
             </>
           )}

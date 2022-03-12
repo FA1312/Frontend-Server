@@ -16,7 +16,7 @@ function Navbar() {
     <nav>
       <div className="welcomebar">
         <section>
-          <h1>MERAKI</h1>
+          <h1>M E R A K I</h1>
           <icons className="addicon">
             <GiHeartEarrings />{' '}
           </icons>

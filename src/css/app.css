@@ -9,24 +9,27 @@
   font-size: 600;
 }
 
-.welcomeName {
-  margin-top: -0.9rem;
-}
-
 .welcomebar h1 {
   padding: 0.8rem;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.2rem;
   border: solid white 0.3rem;
   font-size: 1.5rem;
   font-weight: 600;
   border-radius: 500px;
-  padding: 1rem;
-  margin: 1rem 1rem 0 1rem;
+  margin: 0.5rem 1rem;
 }
 
 .welcomebar button {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.welcomebar section {
+  padding: 1rem;
+}
+
+.welcomeName {
+  margin-top: -1.5rem;
 }
 
 .container {
@@ -79,6 +82,7 @@
 .product-card a {
   border-radius: 30px;
   padding: 0.3rem;
+  font-size: larger;
 }
 
 .product-card p {
@@ -91,9 +95,7 @@
 
 .product-card img {
   border-radius: 30px;
-  height: 250px;
-  width: 250px;
-  margin: 0.8rem 0 0 2rem;
+  margin: 0.8rem 0 0 0;
 }
 
 .add {
@@ -181,7 +183,7 @@
 
 .container-detail {
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .container-detail h2 {
@@ -228,11 +230,15 @@
   color: black;
   padding: 0.5rem;
   border-radius: 20px;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .price {
   margin-bottom: 1rem;
   border: 1px solid black;
+  padding: 0.5rem;
+  font-weight: 600;
 }
 
 .addProduct h1 {
@@ -367,4 +373,28 @@ a.instagram {
 
 .container-about {
   padding: 1.5rem;
+}
+
+.pictures-about {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.container-about h1 {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.container-about p {
+  line-height: 2rem;
+}
+
+.likeIt {
+  padding: 1rem;
+}
+
+.contactUs {
+  padding: 1rem;
 }

@@ -57,17 +57,32 @@ function Product() {
         </p>
       </article>
       <div className="edit-delete">
-        <div className="editLink">
+        <div>
           {isLoggedIn && (
             <>
-              <Link to={`/product/${id}/edit`}>Edit</Link>
+              <p className="editLink">
+                {' '}
+                <Link to={`/product/${id}/edit`}>Edit</Link>{' '}
+              </p>
+            </>
+          )}
+          {!isLoggedIn && (
+            <>
+              <p className="likeIt">Do you like it?</p>
             </>
           )}
         </div>
-        <div className="deleteBtn">
+        <div>
           {isLoggedIn && (
             <>
-              <button onClick={handleDelete}>Delete this Product</button>
+              <button className="deleteBtn" onClick={handleDelete}>
+                Delete this Product
+              </button>
+            </>
+          )}
+          {!isLoggedIn && (
+            <>
+              <p className="contactUs">@contact us</p>
             </>
           )}
         </div>

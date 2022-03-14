@@ -33,7 +33,6 @@ function Product() {
     }
   };
 
-  console.log(productDetail);
   return (
     <div className="container-detail">
       <article>

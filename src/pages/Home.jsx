@@ -21,9 +21,8 @@ function Home() {
 
   return (
     <div className="container">
-      <div className="dropdown"></div>
       <div>
-        <input className="searchbar" placeholder="Search for cariño" onChange={event => setQuery(event.target.value)} />
+        <input className="searchbar" placeholder="Search by name" onChange={event => setQuery(event.target.value)} />
 
         {products
           .filter(product => {

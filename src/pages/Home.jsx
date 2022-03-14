@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import { RiHeartAddLine } from 'react-icons/ri';
 import { FcAbout } from 'react-icons/fc';
 import { MdOutlineRateReview } from 'react-icons/md';
+import { useContext } from 'react';
+import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 
 function Home() {
+  const { isLoggedIn } = useContext(AuthContext);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState('');
   useEffect(() => {
@@ -47,12 +50,15 @@ function Home() {
             );
           })}
       </div>
-      <div className="add">
-        <Link to={`/product/add`}>Add a product</Link>{' '}
-        <icons className="addicon">
-          <RiHeartAddLine />
-        </icons>
-      </div>
+      {isLoggedIn && (
+        <div className="add">
+          <Link to={`/product/add`}>Add a product</Link>{' '}
+          <icons className="addicon">
+            <RiHeartAddLine />
+          </icons>
+        </div>
+      )}
+
       <div className="add">
         <Link to={`/about`}>About</Link>{' '}
         <icons className="addicon">

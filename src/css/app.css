@@ -19,13 +19,17 @@
   margin: 0.5rem 1rem;
 }
 
+.welcomebar span {
+  background-color: none;
+}
+
 .welcomebar button {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .welcomebar section {
-  padding: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
 }
 
 .welcomeName {
@@ -68,7 +72,7 @@
 }
 
 .product-card h4 {
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 1rem 0;
   font-size: large;
   font-style: oblique;
   font-weight: 700;

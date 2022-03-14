@@ -4,7 +4,7 @@ import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { GiHeartEarrings } from 'react-icons/gi';
-import { FiUserPlus } from 'react-icons/fi';
+import { FcPlus } from 'react-icons/fc';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Navbar() {
@@ -47,7 +47,7 @@ function Navbar() {
                 {' '}
                 <button>Sign Up</button>
                 <span className="addicon">
-                  <FiUserPlus />
+                  <FcPlus />
                 </span>
               </Link>
 

@@ -11,32 +11,32 @@ function Footer() {
     <div className="footer">
       <div className="social-container">
         <a href="mailto:meraki.slowcrafts.info@gmail.com" className="gmail social">
-          <icons>
+          <span>
             <CgMail />
-          </icons>
+          </span>
         </a>
         <a href="https://www.facebook.com/faldrovandi" className="facebook social">
-          <icons>
+          <span>
             <BsFacebook />
-          </icons>
+          </span>
         </a>
         <a href="https://www.instagram.com/marienkasunshine/" className="instagram social">
-          <icons>
+          <span>
             <RiInstagramFill />
-          </icons>
+          </span>
         </a>
         <a href="https://github.com/FA1312" className="github social">
-          <icons>
+          <span>
             <AiFillGithub />
-          </icons>
+          </span>
         </a>
       </div>
       <div className="back-home">
         <Link to={'/'}>
           <button>Homepage </button>{' '}
-          <icons className="addicon">
+          <span className="addicon">
             <FcHome />
-          </icons>
+          </span>
         </Link>
       </div>
     </div>

@@ -17,9 +17,9 @@ function Navbar() {
       <div className="welcomebar">
         <section>
           <h1>M E R A K I</h1>
-          <icons className="addicon">
+          <span className="addicon">
             <GiHeartEarrings />{' '}
-          </icons>
+          </span>
           <div className="welcomeName">
             <Link to="/">
               <button>
@@ -46,17 +46,17 @@ function Navbar() {
               <Link to="/signup">
                 {' '}
                 <button>Sign Up</button>
-                <icons className="addicon">
+                <span className="addicon">
                   <FiUserPlus />
-                </icons>
+                </span>
               </Link>
 
               <Link to="/login">
                 {' '}
                 <button>Login</button>{' '}
-                <icons className="addicon">
+                <span className="addicon">
                   <RiLoginCircleFill />
-                </icons>
+                </span>
               </Link>
             </>
           )}

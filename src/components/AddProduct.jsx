@@ -40,9 +40,9 @@ function AddProduct() {
     <div className="addProduct">
       <h1>
         Add A Product to the store
-        <icons className="addicon">
+        <span className="addicon">
           <MdProductionQuantityLimits />
-        </icons>
+        </span>
       </h1>
 
       <div className="addLabels">

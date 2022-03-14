@@ -56,9 +56,9 @@ function EditProduct() {
     <div className="edit-product">
       <h1>
         In this page you can modify the product
-        <icons className="addicon">
+        <span className="addicon">
           <FcFlashOn />
-        </icons>
+        </span>
       </h1>
       <form onSubmit={handleSubmit}>
         <label>Name</label>
@@ -81,9 +81,9 @@ function EditProduct() {
 
         <button type="submit">
           Click to Update!{' '}
-          <icons className="addicon">
+          <span className="addicon">
             <FcIdea />
-          </icons>{' '}
+          </span>{' '}
         </button>
       </form>
     </div>

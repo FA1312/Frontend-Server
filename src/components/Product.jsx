@@ -4,7 +4,7 @@ import apiService from '../services/api.service';
 import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 import { MdLocalShipping } from 'react-icons/md';
-
+import { FaRegKissWinkHeart } from 'react-icons/fa';
 import { FcMoneyTransfer } from 'react-icons/fc';
 
 function Product() {
@@ -41,18 +41,18 @@ function Product() {
 
         <p>
           {productDetail.shipping ? 'We can ship the item ' : 'Unfortunately the item cannot be shipped'}
-          <icons className="addicon">
+          <span className="addicon">
             <MdLocalShipping />
-          </icons>
+          </span>
         </p>
         <div>
           <img src={productDetail.photo} alt={productDetail.name} />
         </div>
         <p className="price">
           Price: {productDetail.price} €{' '}
-          <icons className="addicon">
+          <span className="addicon">
             <FcMoneyTransfer />
-          </icons>
+          </span>
         </p>
       </article>
       <div className="edit-delete">
@@ -81,7 +81,12 @@ function Product() {
           )}
           {!isLoggedIn && (
             <>
-              <p className="contactUs">@contact us</p>
+              <p className="contactUs">
+                @contact us &nbsp;
+                <span className="addicon">
+                  <FaRegKissWinkHeart />
+                </span>
+              </p>
             </>
           )}
         </div>

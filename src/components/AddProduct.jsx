@@ -55,11 +55,10 @@ function AddProduct() {
           <input type="text" name="price" value={form.price} onChange={handleForm} />
           <label>Which category is the product?</label>
           <input type="text" name="category" value={form.category} onChange={handleForm} />
-          <label>Upload a picture of your product</label>
-          <input type="text" name="photo" value={form.photo} onChange={handleForm} />
+          <label>Upload a picture</label>
+          <input type="text" name="photo" value={form.photo} onChange={handleForm} /> <br />
           <label>Can you ship the product?</label>
           <input type="text" name="shipping" value={form.shipping} onChange={handleForm} />
-
           <button type="submit">Add New Product</button>
         </form>
       </div>

@@ -21,32 +21,33 @@ function Home() {
 
   return (
     <div className="container">
+      <div className="dropdown"></div>
       <div>
         <input className="searchbar" placeholder="Search for cariño" onChange={event => setQuery(event.target.value)} />
-      </div>
 
-      {products
-        .filter(product => {
-          if (query === '') {
-            return product;
-          } else if (product.name.toLowerCase().includes(query.toLowerCase())) {
-            return product;
-          }
-        })
-        .map(product => {
-          return (
-            <AllProducts
-              key={product._id}
-              id={product._id}
-              name={product.name}
-              description={product.description}
-              price={product.price}
-              category={product.category}
-              photo={product.photo}
-              shipping={product.shipping}
-            />
-          );
-        })}
+        {products
+          .filter(product => {
+            if (query === '') {
+              return product;
+            } else if (product.name.toLowerCase().includes(query.toLowerCase())) {
+              return product;
+            }
+          })
+          .map(product => {
+            return (
+              <AllProducts
+                key={product._id}
+                id={product._id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                category={product.category}
+                photo={product.photo}
+                shipping={product.shipping}
+              />
+            );
+          })}
+      </div>
       <div className="add">
         <Link to={`/product/add`}>Add a product</Link>{' '}
         <icons className="addicon">

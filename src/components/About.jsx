@@ -1,4 +1,10 @@
+import React from 'react';
+import { useEffect } from 'react';
+
 function About() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div className="container-about">
       <h1>What is Meraki ?</h1>
@@ -14,17 +20,12 @@ function About() {
           <img src="/images/turtle.png" />
           <img src="/images/petroleo.jpg" />
         </div>
+
         <p>
-          Every product sold in this website was meant to be thrown away. Their use ended. <br />
-          Meraki brought this product back to life to give a piece of love to everyone who buys those.
-          <br />
-        </p>
-        <br />
-        <p>
-          Upcycling represents a variety of processes by which “old” products get to be modified and get a second life
-          as they’re turned into a “new” product. In this way, thanks to the mix and aggregation of used materials,
-          components and items, the end result is a “new product” with more value than the original value of the sum of
-          all its components.
+          Meraki principle is to turn “old” products and provide them a second life as they’re turned into an{' '}
+          <strong>upcycled item</strong>. <br />
+          In this way, thanks to the mix and aggregation of used materials, components and items, the end result is a
+          “new product” with more value than the original value of the sum of all its components.
         </p>
         <br />
         <strong>Dont recycle, upcycle!</strong>

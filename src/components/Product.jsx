@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
 import { useContext } from 'react';
@@ -8,6 +8,7 @@ import { FaRegKissWinkHeart } from 'react-icons/fa';
 import { FcMoneyTransfer } from 'react-icons/fc';
 
 function Product() {
+  const titleRef = useRef();
   const [productDetail, setProductDetail] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Product() {
       .getThisProduct(id)
       .then(product => {
         setProductDetail(product.data);
+        window.scrollTo({ behavior: 'smooth', top: titleRef.current.offsetTop });
       })
       .catch(error => {
         console.log(error);
@@ -37,8 +39,10 @@ function Product() {
   return (
     <div className="container-detail">
       <article>
-        <h2>{productDetail.name}</h2>
-        <p>- {productDetail.description}</p>
+        <h2 id={productDetail.name} ref={titleRef}>
+          {productDetail.name}
+        </h2>
+        <p>{productDetail.description}</p>
 
         <p>
           {productDetail.shipping ? 'We can ship the item ' : 'Unfortunately the item cannot be shipped'}

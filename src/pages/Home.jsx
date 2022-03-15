@@ -13,6 +13,7 @@ function Home() {
   const { isLoggedIn } = useContext(AuthContext);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState('');
+
   useEffect(() => {
     apiService
       .getAllProducts()
@@ -25,13 +26,20 @@ function Home() {
   return (
     <div className="container">
       <div>
-        <input className="searchbar" placeholder="Search by name" onChange={event => setQuery(event.target.value)} />
+        <input
+          className="searchbar"
+          placeholder="Search by category or name"
+          onChange={event => setQuery(event.target.value)}
+        />
 
         {products
           .filter(product => {
             if (query === '') {
               return product;
-            } else if (product.name.toLowerCase().includes(query.toLowerCase())) {
+            } else if (
+              product.name.toLowerCase().includes(query.toLowerCase()) ||
+              product.category.toLowerCase().includes(query.toLowerCase())
+            ) {
               return product;
             }
           })

@@ -23,7 +23,7 @@ function Navbar() {
           <div className="welcomeName">
             <Link to="/">
               <button>
-                <strong>Hey, take a look at my items {user && user.name} </strong>
+                <strong>Welcome {user && user.name} to Meraki store </strong>
               </button>
             </Link>
           </div>

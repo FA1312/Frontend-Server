@@ -53,23 +53,23 @@ function Home() {
       {isLoggedIn && (
         <div className="add">
           <Link to={`/product/add`}>Add a product</Link>{' '}
-          <icons className="addicon">
+          <span className="addicon">
             <RiHeartAddLine />
-          </icons>
+          </span>
         </div>
       )}
 
       <div className="add">
         <Link to={`/about`}>About</Link>{' '}
-        <icons className="addicon">
+        <span className="addicon">
           <FcAbout />
-        </icons>
+        </span>
       </div>
       <div className="add">
         <Link to={`/reviews`}>Reviews</Link>{' '}
-        <icons className="addicon">
+        <span className="addicon">
           <MdOutlineRateReview />
-        </icons>
+        </span>
       </div>
     </div>
   );

@@ -197,7 +197,7 @@ svg {
 }
 
 .container-detail {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .container-detail h2 {
@@ -381,6 +381,10 @@ a.instagram {
 
 .testimonials {
   padding: 1.5rem;
+}
+
+.testimonials h5 {
+  font-weight: 600;
 }
 
 .client img {

@@ -3,18 +3,18 @@ import { useEffect } from 'react';
 
 function About() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 250, left: 0, behavior: 'smooth' });
   }, []);
   return (
-    <div className="container-about">
+    <div className="container-about" id="title">
       <h1>What is Meraki ?</h1>
       <div>
         <div>
           <img src="https://images.squarespace-cdn.com/content/v1/591560f7f5e231cfb6b39b34/1519980440732-I2AIW1S3O12CFYYXYYFY/MerakiWebsiteLogoGreek.png?format=1000w" />
         </div>
         <p>
-          Single-use plastic products (SUPs) are used once, or for a short period of time, before being thrown away. The
-          impacts of this plastic waste on the environment and our health are global and can be drastic.
+          Single-use plastic (SUPs) and manifactured products are used once, or for a short period of time, before being
+          thrown away. The impacts of this waste on the environment and our health are global and can be drastic.
         </p>
         <div className="pictures-about">
           <img src="/images/turtle.png" />

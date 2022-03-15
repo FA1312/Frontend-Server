@@ -39,14 +39,19 @@ const data = [
   },
   {
     avatar: '/images/avatar8.jpg',
-    name: 'Mariano Rajoy Brey',
+    name: 'M.Rajoy Brey',
     review: 'Cuanto peor mejor para todos y cuanto peor para todos mejor. Mejor para mí el suyo beneficio político.',
+  },
+  {
+    avatar: '/images/avatar9.png',
+    name: 'Jon',
+    review: 'No hay entrada de la Ovella Negra antes del puente!',
   },
 ];
 
 function Reviews() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 250, left: 0, behavior: 'smooth' });
   }, []);
   return (
     <section className="testimonials">

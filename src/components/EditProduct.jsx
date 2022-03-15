@@ -23,6 +23,7 @@ function EditProduct() {
 
   useEffect(() => {
     getProductById(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOnChange = e => {

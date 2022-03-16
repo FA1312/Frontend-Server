@@ -1,73 +1,108 @@
 import React from 'react';
-import { useEffect } from 'react';
-
-const data = [
-  {
-    avatar: '/images/avatar1.jpg',
-    name: 'John Smith',
-    review: 'Hey, I am a random guy, leave me alone or I am gonna call the police!',
-  },
-  {
-    avatar: '/images/avatar2.jpeg',
-    name: 'Darth Vader',
-    review: 'Luke, I am your father, thank you for the present you bought on this website',
-  },
-  {
-    avatar: '/images/avatar3.jpeg',
-    name: 'Super Sloth',
-    review: 'ARGWWWWHHHHARAWAAAAAHHHHHH',
-  },
-  {
-    avatar: '/images/avatar4.jpg',
-    name: 'T2',
-    review: `I'll be back for more products`,
-  },
-  {
-    avatar: '/images/avatar5.jpeg',
-    name: 'Gollum',
-    review: 'My precious...is sold here!!!',
-  },
-  {
-    avatar: '/images/avatar6.jpg',
-    name: 'Tyler Durden',
-    review: 'The first rule of Meraki is to spread the word so everyone knows about the existence of this website',
-  },
-  {
-    avatar: '/images/avatar7.jpg',
-    name: 'The Joker',
-    review: 'The only sensible way to live in this world is to live without rules or buying Meraki products',
-  },
-  {
-    avatar: '/images/avatar8.jpg',
-    name: 'M.Rajoy Brey',
-    review: 'Cuanto peor mejor para todos y cuanto peor para todos mejor. Mejor para mí el suyo beneficio político.',
-  },
-  {
-    avatar: '/images/avatar9.png',
-    name: 'Jon',
-    review: 'No hay entrada de la Ovella Negra antes del puente!',
-  },
-];
+import { useEffect, useState } from 'react';
+import apiService from '../services/api.service';
+import { useContext } from 'react';
+import { AuthContext } from './../context/auth.context';
 
 function Reviews() {
+  const [form, setForm] = useState({
+    name: '',
+    rating: '',
+    avatar: '',
+    reviewDescription: '',
+  });
+  const { isLoggedIn } = useContext(AuthContext);
+  const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
-    window.scrollTo({ top: 250, left: 0, behavior: 'smooth' });
+    apiService
+      .getAllReviews()
+      .then(response => {
+        setReviews(response.data);
+        window.scrollTo({ top: 250, left: 0, behavior: 'smooth' });
+      })
+      .catch(error => console.error(error));
   }, []);
+
+  const handleDelete = async id => {
+    try {
+      await apiService.deleteReview(id);
+      const response = await apiService.getAllReviews();
+      setReviews(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleForm = e => {
+    setForm(previous => {
+      return {
+        ...previous,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    apiService
+      .addReview(form)
+      .then(response => {
+        window.location.reload(false);
+        setReviews(response.data);
+      })
+      .catch(error => console.log(error));
+  };
+
+  console.log(reviews);
   return (
     <section className="testimonials">
       <h5>Real reviews from real customers</h5>
       <div className="container-testimonials">
-        {data.map(({ avatar, name, review }, index) => {
+        {reviews.map(({ avatar, name, reviewDescription, rating, _id }, index) => {
           return (
             <article key={index} className="review">
               <div className="client">
                 <img src={avatar} />
               </div>
               <h4 className="client-name">{name}</h4>
-              <small className="client-review">{review}</small>
+              <small className="client-review">{reviewDescription}</small>
+              <p>
+                {' '}
+                <small>Rating: {rating} / 5 </small>
+              </p>
+              {isLoggedIn && (
+                <>
+                  <button
+                    className="deleteBtn"
+                    onClick={() => {
+                      handleDelete(_id);
+                    }}
+                  >
+                    Delete this Review
+                  </button>
+                </>
+              )}
             </article>
           );
         })}
+      </div>
+      <div className="addreview">
+        <h2>Leave your review</h2>
+        <div className="addLabels">
+          <form onSubmit={handleSubmit}>
+            <label>Your name</label>
+            <input type="text" name="name" value={form.name} onChange={handleForm} />
+            <label>Upload a picture</label>
+            <input type="text" name="avatar" value={form.avatar} onChange={handleForm} />
+            <label>Leave your comment</label>
+            <input type="text" name="reviewDescription" value={form.reviewDescription} onChange={handleForm} />
+            <label>Rating</label>
+            <input type="text" name="rating" value={form.rating} onChange={handleForm} />
+
+            <button type="submit">Add</button>
+          </form>
+        </div>
       </div>
     </section>
   );

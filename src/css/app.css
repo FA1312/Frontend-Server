@@ -140,7 +140,7 @@ svg {
   background-color: white;
   color: rgb(30, 137, 76);
   border-radius: 20px;
-  padding: 0.7rem;
+  padding: 0.8rem;
 }
 
 .SignupPage label {
@@ -271,8 +271,8 @@ svg {
 }
 
 .addLabels input {
-  margin: 0.3rem 1rem 1rem 1rem;
   border-radius: 20px;
+  margin: 1rem;
 }
 
 .addLabels input:focus {
@@ -423,4 +423,16 @@ a.instagram {
 .loading {
   display: flex;
   justify-content: space-evenly;
+}
+
+.addreview {
+  margin: 2rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.addreview h2 {
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 40px;
+  font-weight: bold;
 }

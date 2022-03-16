@@ -22,9 +22,8 @@ function Navbar() {
           </span>
           <div className="welcomeName">
             <Link to="/">
-              <button>
-                <strong>Welcome {user && user.name} to the store </strong>
-              </button>
+              <button>Welcome {user && user.name} to the store</button>
+              {console.log(user)}
             </Link>
           </div>
         </section>

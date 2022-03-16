@@ -16,7 +16,7 @@ function Product() {
 
   useEffect(() => {
     apiService
-      .getThisProduct(id)
+      .getThisProduct()
       .then(product => {
         setProductDetail(product.data);
         window.scrollTo({ behavior: 'smooth', top: titleRef.current.offsetTop });

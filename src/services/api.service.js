@@ -56,6 +56,22 @@ class ApiService {
   deleteProduct = id => {
     return this.api.delete(`/api/products/${id}/delete`);
   };
+
+  getAllReviews = () => {
+    return this.api.get('/api/reviews');
+  };
+
+  getThisReview = id => {
+    return this.api.get(`/api/reviews/${id}`);
+  };
+
+  addReview = form => {
+    return this.api.post('/api/reviews', form);
+  };
+
+  deleteReview = id => {
+    return this.api.delete(`/api/reviews/${id}`);
+  };
 }
 
 // Create one instance (object) of the service

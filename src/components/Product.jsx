@@ -44,7 +44,7 @@ function Product() {
         </h2>
         <p>{productDetail.description}</p>
 
-        <p>
+        <p className="shipping">
           {productDetail.shipping ? 'We can ship the item ' : 'Unfortunately the item cannot be shipped'}
           <span className="addicon">
             <MdLocalShipping />

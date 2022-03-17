@@ -215,6 +215,7 @@ svg {
 .container-detail p {
   margin-top: 1rem;
   letter-spacing: 0.1rem;
+  font-weight: 500;
 }
 
 .container-detail img {
@@ -252,7 +253,9 @@ svg {
   margin-bottom: 1rem;
   border: 1px solid black;
   padding: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  background-color: darkgoldenrod;
+  color: black;
 }
 
 .addProduct h1 {
@@ -380,7 +383,7 @@ a.instagram {
 }
 
 .testimonials {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 0 1.5rem;
 }
 
 .testimonials h5 {
@@ -435,4 +438,15 @@ a.instagram {
   padding: 1rem;
   border-radius: 40px;
   font-weight: bold;
+}
+
+.shipping {
+  border: 2px solid black;
+  padding: 0.8rem;
+  background-color: rgb(28, 116, 216);
+  border-radius: 30px;
+}
+
+.shipping svg {
+  background-color: rgb(28, 116, 216);
 }

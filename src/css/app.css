@@ -265,9 +265,7 @@ svg {
 }
 
 .addLabels {
-  text-align: center;
   border: solid rgb(30, 137, 76) 3px;
-  padding: 1rem;
   color: white;
   font-weight: 400;
   font-style: italic;
@@ -429,7 +427,7 @@ a.instagram {
 }
 
 .addreview {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 1rem 0;
   font-size: 0.9rem;
 }
 
@@ -438,6 +436,7 @@ a.instagram {
   padding: 1rem;
   border-radius: 40px;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .shipping {

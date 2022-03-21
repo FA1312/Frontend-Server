@@ -62,7 +62,7 @@ section {
 }
 
 .bg-image {
-  background: linear-gradient(65deg, rgba(242, 248, 240, 0.62), rgba(27, 78, 22, 0.58)),
+  background: linear-gradient(65deg, rgba(42, 104, 78, 0.62), rgba(27, 78, 22, 0.58)),
     repeat url('https://www.kason.de/wp-content/uploads/2014/07/Nachhaltigkeit-und-Umwelt_web_1200x800.jpg');
   background-size: auto;
 }

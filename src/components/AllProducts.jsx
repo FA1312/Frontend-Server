@@ -7,7 +7,7 @@ function AllProducts({ id, name, category, photo }) {
         <Link to={`/product/${id}`}>{name}</Link>
       </h4>
 
-      <div>
+      <div className="product-category">
         <p>{category}</p>
         <img src={photo} alt={name} />
       </div>

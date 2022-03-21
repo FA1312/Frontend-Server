@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 import { AiOutlineLogout } from 'react-icons/ai';
-import { GiHeartEarrings } from 'react-icons/gi';
 import { FcPlus } from 'react-icons/fc';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
@@ -17,49 +16,47 @@ function Navbar() {
       <div className="welcomebar">
         <section>
           <h1>M E R A K I</h1>
-          <span className="addicon">
-            <GiHeartEarrings />{' '}
-          </span>
+
           <div className="welcomeName">
             <Link to="/">
-              <button>Welcome {user && user.name} to the store</button>
-              {console.log(user)}
+              <button>Welcome to the store {user && user.name}</button>
             </Link>
           </div>
-        </section>
-        <div>
-          {isLoggedIn && (
-            <div className="anotheruser">
-              <small>
-                Are you another user?
-                <button onClick={logOutUser}>
-                  <AiOutlineLogout />
-                </button>
-              </small>
-            </div>
-          )}
-        </div>
-        <div className="login">
-          {!isLoggedIn && (
-            <>
-              <Link to="/signup">
-                {' '}
-                <button>Sign Up</button>
-                <span className="addicon">
-                  <FcPlus />
-                </span>
-              </Link>
 
-              <Link to="/login">
-                {' '}
-                <button>Login</button>{' '}
-                <span className="addicon">
-                  <RiLoginCircleFill />
-                </span>
-              </Link>
-            </>
-          )}
-        </div>
+          <div>
+            {isLoggedIn && (
+              <div className="anotheruser">
+                <p>
+                  Are you another user?
+                  <button className="logout" onClick={logOutUser}>
+                    <AiOutlineLogout />
+                  </button>
+                </p>
+              </div>
+            )}
+          </div>
+          <div className="login">
+            {!isLoggedIn && (
+              <>
+                <Link to="/signup">
+                  {' '}
+                  <button>Sign Up</button>
+                  <span className="addicon">
+                    <FcPlus />
+                  </span>
+                </Link>
+
+                <Link to="/login">
+                  {' '}
+                  <button>Login</button>{' '}
+                  <span className="addicon">
+                    <RiLoginCircleFill />
+                  </span>
+                </Link>
+              </>
+            )}
+          </div>
+        </section>
       </div>
     </nav>
   );

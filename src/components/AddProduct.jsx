@@ -45,7 +45,7 @@ function AddProduct() {
         </span>
       </h1>
 
-      <div className="addLabels">
+      <div className="addLabels-addProduct">
         <form onSubmit={handleSubmit}>
           <label>What is the name of the product?</label>
           <input type="text" name="name" value={form.name} onChange={handleForm} />

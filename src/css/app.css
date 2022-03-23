@@ -320,7 +320,7 @@ svg {
 }
 
 .addLabels {
-  border: solid forestgreen 6px;
+  border: solid black 3px;
   background: linear-gradient(30deg, rgba(242, 248, 240, 0.12), rgba(27, 78, 22, 0.58)),
     repeat url('https://www.kason.de/wp-content/uploads/2014/07/Nachhaltigkeit-und-Umwelt_web_1200x800.jpg');
   font-weight: 400;
@@ -366,7 +366,7 @@ svg {
 .addLabels label {
     color: white;
     border: solid 1px green;
-    background-color: forestgreen;
+    background-color: black;
     border-radius: 30px;
     padding: 0.3rem;
 }
@@ -384,8 +384,8 @@ svg {
   border: solid 3px rgb(30, 137, 76);
   padding: 0.5rem;
   border-radius: 20px;
-  background-color: white;
-  color: rgb(30, 137, 76);
+  background-color: rgb(30, 137, 76);
+  color: white;
   font-weight: 700;
 }
 

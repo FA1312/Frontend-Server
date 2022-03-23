@@ -6,13 +6,14 @@ import { AuthContext } from './../context/auth.context';
 import { MdLocalShipping } from 'react-icons/md';
 import { FaRegKissWinkHeart } from 'react-icons/fa';
 import { FcMoneyTransfer } from 'react-icons/fc';
+import { ReactComponent as Loading } from '../../src/assets/loading.svg';
 
 function Product() {
   const titleRef = useRef();
   const [productDetail, setProductDetail] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, isLoading } = useContext(AuthContext);
 
   useEffect(() => {
     apiService
@@ -37,6 +38,14 @@ function Product() {
   };
 
   return (
+    <>
+      {isLoading && (
+          <div className="loading">
+            <Loading />
+          </div>
+        )}
+      
+    {!isLoading && (
     <div className="container-detail">
       <article>
         <h2 id={productDetail.name} ref={titleRef}>
@@ -97,6 +106,8 @@ function Product() {
         </div>
       </div>
     </div>
+      )}
+      </>
   );
 }
 

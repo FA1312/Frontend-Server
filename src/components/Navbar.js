@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 import { AiOutlineLogout } from 'react-icons/ai';
+
 {
   /*import { FcPlus } from 'react-icons/fc';*/
 }
@@ -36,6 +37,14 @@ function Navbar() {
                     <AiOutlineLogout />
                   </button>
                 </p>
+                <Link to={`/product/add`}>
+                  {' '}
+                  <button>Add a product</button>
+                </Link>
+                <Link to={`/reviews`}>
+                  {' '}
+                  <button>Reviews</button>
+                </Link>
               </div>
             )}
           </div>

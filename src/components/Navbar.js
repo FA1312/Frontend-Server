@@ -3,8 +3,12 @@ import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 import '../css/app.css';
 import { AiOutlineLogout } from 'react-icons/ai';
-import { FcPlus } from 'react-icons/fc';
+{
+  /*import { FcPlus } from 'react-icons/fc';*/
+}
 import { RiLoginCircleFill } from 'react-icons/ri';
+import { FcAbout } from 'react-icons/fc';
+import { MdOutlineRateReview } from 'react-icons/md';
 
 function Navbar() {
   // Subscribe to the AuthContext to gain access to
@@ -37,14 +41,14 @@ function Navbar() {
           </div>
           <div className="login">
             {!isLoggedIn && (
-              <>
-                <Link to="/signup">
+              <div>
+                {/*<Link to="/signup">
                   {' '}
                   <button>Sign Up</button>
                   <span className="addicon">
                     <FcPlus />
                   </span>
-                </Link>
+                </Link> */}
 
                 <Link to="/login">
                   {' '}
@@ -53,7 +57,23 @@ function Navbar() {
                     <RiLoginCircleFill />
                   </span>
                 </Link>
-              </>
+
+                <Link to={`/about`}>
+                  {' '}
+                  <button>About</button>
+                  <span className="addicon">
+                    <FcAbout />
+                  </span>
+                </Link>
+
+                <Link to={`/reviews`}>
+                  {' '}
+                  <button>Reviews</button>
+                  <span className="addicon">
+                    <MdOutlineRateReview />
+                  </span>
+                </Link>
+              </div>
             )}
           </div>
         </section>

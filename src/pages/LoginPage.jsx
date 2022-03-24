@@ -1,8 +1,10 @@
 import { useState, useContext } from 'react';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/auth.context';
-import { ImUserPlus } from 'react-icons/im';
+{
+  /*import { ImUserPlus } from 'react-icons/im';*/
+}
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -43,11 +45,11 @@ function LoginPage() {
           <button type="submit">Login</button>
         </form>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <p>Dont have an account yet?</p>
+        {/*<p>Dont have an account yet?</p>
         <Link to={'/signup'}> Sign Up</Link>{' '}
         <icons className="addicon">
           <ImUserPlus />
-        </icons>
+        </icons>*/}
       </div>
     </div>
   );

@@ -67,10 +67,7 @@ function Reviews() {
               </div>
               <h4 className="client-name">{name}</h4>
               <small className="client-review">{reviewDescription}</small>
-              <p>
-                {' '}
-                <small>Rating: {rating} / 5 </small>
-              </p>
+              <p className="rating"> Rating: {rating} / 5</p>
               {isLoggedIn && (
                 <>
                   <button
@@ -92,14 +89,22 @@ function Reviews() {
         <div className="addLabels">
           <form onSubmit={handleSubmit}>
             <label>Your name</label>
+
             <input type="text" name="name" value={form.name} onChange={handleForm} />
+            <br />
+            <br />
             <label>Upload a picture</label>
             <input type="text" name="avatar" value={form.avatar} onChange={handleForm} />
+            <br />
+            <br />
             <label>Leave your comment</label>
             <input type="text" name="reviewDescription" value={form.reviewDescription} onChange={handleForm} />
+            <br />
+            <br />
             <label>Rating</label>
             <input type="text" name="rating" value={form.rating} onChange={handleForm} />
-
+            <br />
+            <br />
             <button type="submit">Add</button>
           </form>
         </div>

@@ -410,7 +410,7 @@ svg {
   color: white;
   font-weight: 600;
   font-style: italic;
-  background: linear-gradient(55deg, rgba(242, 248, 240, 0.22), rgba(27, 78, 22, 0.58)),
+  background: linear-gradient(120deg, rgba(242, 248, 240, 0.12), rgba(27, 78, 22, 0.58)),
     repeat url('https://www.kason.de/wp-content/uploads/2014/07/Nachhaltigkeit-und-Umwelt_web_1200x800.jpg');
 }
 

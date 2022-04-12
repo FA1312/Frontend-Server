@@ -36,7 +36,7 @@ function EditProduct() {
   };
 
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); //preventDefault() method stops the default action of a selected element from happening by a user.
     apiService
       .updateProduct(product._id, {
         name: product.name,
